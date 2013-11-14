@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+   <head>
+      <script>
+         chrome.contextMenus.create({
+            title: "Open Frame in New Tab",
+            contexts: ["frame"],
+            onclick: function(clickData) {
+               chrome.tabs.create({ url: clickData.frameUrl });
+            }
+         });
+      </script>
+   </head>
+   <body>
+   </body>
+</html>
